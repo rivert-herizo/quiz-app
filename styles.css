@@ -68,6 +68,7 @@ li {
   border: none;
   outline: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .result-div {
@@ -79,4 +80,8 @@ li {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+.hide {
+  display: none;
 }

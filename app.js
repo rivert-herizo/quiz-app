@@ -1,0 +1,33 @@
+import { questions } from "./questions.js";
+
+const questionDiv = document.getElementById("question-div");
+const questionTitle = document.getElementById("question");
+const questionList = document.getElementById("question-list");
+const nextBtn = document.getElementById("next-btn");
+const result = document.getElementById("result");
+const scoreTotal = document.getElementById("score");
+const restart = document.getElementById("restart-btn");
+const start = document.getElementById("start-btn");
+
+let position = 0;
+let score = 0;
+
+start.addEventListener("click", (e) => {
+  questionDiv.classList.remove("hide");
+  start.classList.add("hide");
+  showQuestions();
+});
+
+function showQuestions() {
+  if (position < questions.length) {
+    questionTitle.innerText = `${questions[position].question}`;
+    questionList.innerHTML = "";
+    questions[position].choices.forEach((choice) => {
+      const li = document.createElement("li");
+      li.className = "choice";
+      li.innerHTML = choice;
+      questionList.appendChild(li);
+    });
+    nextBtn.classList.add("hide");
+  }
+}

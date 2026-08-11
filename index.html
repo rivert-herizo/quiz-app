@@ -9,20 +9,21 @@
   <body>
     <div class="container">
       <h1 class="title">Quiz app</h1>
-      <div id="question-div" class="question-div">
-        <h2 id="question">Question</h2>
+      <div id="question-div" class="question-div hide">
+        <h2 id="question"></h2>
         <ul id="question-list" class="question-list">
+          <!-- <li class="choice">Question</li>
           <li class="choice">Question</li>
-          <li class="choice">Question</li>
-          <li class="choice">Question</li>
+          <li class="choice">Question</li> -->
         </ul>
-        <button id="next-btn" class="next-btn btn">Next question</button>
+        <button id="next-btn" class="next-btn btn hide">Next question</button>
       </div>
-      <div id="result" class="result-div">
+      <div id="result" class="result-div hide">
         <p>You got <span id="score">0</span> out of 3</p>
         <button id="restart-btn" class="restart-btn btn">Restart</button>
       </div>
       <button id="start-btn" class="start-btn btn">Start the quiz</button>
     </div>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>
