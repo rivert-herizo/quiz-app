@@ -18,6 +18,17 @@ start.addEventListener("click", (e) => {
   showQuestions();
 });
 
+questionList.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    e.target.classList.add("btn");
+    console.log(e.target.innerText);
+    nextBtn.classList.remove("hide");
+    if (e.target.innerText === questions[position].choices[position]) {
+      score++;
+    }
+  }
+});
+
 function showQuestions() {
   if (position < questions.length) {
     questionTitle.innerText = `${questions[position].question}`;
