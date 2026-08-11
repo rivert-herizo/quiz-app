@@ -29,6 +29,14 @@ questionList.addEventListener("click", (e) => {
   }
 });
 
+nextBtn.addEventListener("click", (e) => {
+  position++;
+  showQuestions();
+  if (position > 3) {
+    showResult();
+  }
+});
+
 function showQuestions() {
   if (position < questions.length) {
     questionTitle.innerText = `${questions[position].question}`;
