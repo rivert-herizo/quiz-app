@@ -18,11 +18,65 @@ body {
 .container {
   background: #fff2db;
   height: auto;
-  max-width: 500px;
+  width: 400px;
   display: flex;
   flex-direction: column;
+  gap: 30px;
   justify-content: center;
   align-items: center;
   padding: 20px;
   border-radius: 10px;
+}
+
+.title {
+  font-size: large;
+}
+
+.question-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.question-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+li {
+  width: 100%;
+  list-style: none;
+  text-decoration: none;
+  background: #f7f4ed;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  color: #fffaf3;
+  font-weight: bold;
+  background: #f62440;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.result-div {
+  padding: 20px;
+  background: #f7f4ed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

@@ -10,18 +10,19 @@
     <div class="container">
       <h1 class="title">Quiz app</h1>
       <div id="question-div" class="question-div">
+        <h2 id="question">Question</h2>
         <ul id="question-list" class="question-list">
-          <li id="question">Question</li>
-          <li id="question">Question</li>
-          <li id="question">Question</li>
+          <li class="choice">Question</li>
+          <li class="choice">Question</li>
+          <li class="choice">Question</li>
         </ul>
         <button id="next-btn" class="next-btn btn">Next question</button>
       </div>
-      <button id="start-btn" class="start-btn btn">Start the quiz</button>
-
       <div id="result" class="result-div">
-        <button id="restart-btn" class="restart-btn">Restart</button>
+        <p>You got <span id="score">0</span> out of 3</p>
+        <button id="restart-btn" class="restart-btn btn">Restart</button>
       </div>
+      <button id="start-btn" class="start-btn btn">Start the quiz</button>
     </div>
   </body>
 </html>
