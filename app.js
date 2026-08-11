@@ -50,3 +50,9 @@ function showQuestions() {
     nextBtn.classList.add("hide");
   }
 }
+
+function showResult() {
+  result.classList.remove("hide");
+  scoreTotal.innerText = score;
+  questionDiv.classList.add("hide");
+}
