@@ -20,21 +20,33 @@ start.addEventListener("click", (e) => {
 
 questionList.addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
+    const choices = questionList.querySelectorAll("li");
+    choices.forEach((li) => li.classList.remove("btn"));
+
     e.target.classList.add("btn");
-    console.log(e.target.innerText);
     nextBtn.classList.remove("hide");
-    if (e.target.innerText === questions[position].choices[position]) {
-      score++;
-    }
   }
 });
 
 nextBtn.addEventListener("click", (e) => {
-  position++;
-  showQuestions();
-  if (position > 3) {
-    showResult();
+  const selectedChoice = document.querySelector("li.btn");
+
+  if (
+    selectedChoice &&
+    selectedChoice.innerText.trim() === questions[position].answer
+  ) {
+    score++;
   }
+  position++;
+  if (position >= questions.length) {
+    showResult();
+  } else {
+    showQuestions();
+  }
+});
+
+restart.addEventListener("click", (e) => {
+  restartGame();
 });
 
 function showQuestions() {
@@ -55,4 +67,11 @@ function showResult() {
   result.classList.remove("hide");
   scoreTotal.innerText = score;
   questionDiv.classList.add("hide");
+}
+
+function restartGame() {
+  result.classList.add("hide");
+  start.classList.remove("hide");
+  position = 0;
+  score = 0;
 }
